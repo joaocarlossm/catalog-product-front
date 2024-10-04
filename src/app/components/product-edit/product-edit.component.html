@@ -1,0 +1,23 @@
+<h1 mat-dialog-title class="modal-title">{{ title }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="editForm" class="edit-form">
+    <mat-form-field appearance="outline" class="input-item">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" placeholder="Nome do produto">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="input-item">
+      <mat-label>Preço</mat-label>
+      <input matInput formControlName="preco" type="number" placeholder="Preço">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="input-item">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="descricao" placeholder="Descrição do produto"></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button (click)="onSave()" [disabled]="!editForm.valid">Salvar</button>
+</div>

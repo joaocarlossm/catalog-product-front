@@ -1,0 +1,91 @@
+/* Usando ::ng-deep para aplicar estilos diretamente ao container da modal */
+::ng-deep .custom-dialog-container .mat-dialog-container {
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background-color: var(--ion-color-light);
+    width: 700px !important; /* Aumentando o tamanho da modal */
+    max-width: 90vw !important; /* Permitindo ajuste automático da largura até 90% da viewport */
+    max-height: 90vh !important; /* Permitindo ajuste automático da altura até 90% da viewport */
+    overflow: hidden !important; /* Garantindo que o conteúdo se ajuste ao tamanho da modal */
+}
+
+::ng-deep .custom-dialog-container .mat-mdc-dialog-surface {
+    overflow: hidden !important;
+    padding: 20px !important;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background-color: var(--ion-color-light);
+    width: 700px !important; /* Aumentando o tamanho da modal */
+    max-width: 90vw !important; /* Permitindo ajuste automático da largura até 90% da viewport */
+    max-height: 90vh !important; /* Permitindo ajuste automático da altura até 90% da viewport */
+}
+
+/* Título */
+.modal-title {
+    font-size: 1.4em; /* Mantendo o título em um tamanho adequado */
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1e3a5f; /* Azul consistente */
+    display: block;
+}
+
+/* Formulário */
+.edit-form {
+    margin-bottom: 20px;
+}
+
+/* Estilo dos campos */
+.input-item {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    border-color: #1e3a5f !important; /* Azul escuro */
+}
+
+.mat-form-field-label {
+    color: #1e3a5f !important; /* Azul escuro */
+}
+
+input.mat-input-element, textarea.mat-input-element {
+    background-color: var(--ion-color-light);
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo dos botões */
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+button.mat-button {
+    background-color: #1e3a5f;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin-left: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button.mat-button[disabled] {
+    background-color: #c3c3c3;
+}
+
+button.mat-button:hover {
+    background-color: #142a45;
+}
+
+button.mat-button:first-child {
+    background-color: transparent;
+    color: #1e3a5f;
+}
+
+button.mat-button:first-child:hover {
+    background-color: rgba(30, 58, 95, 0.1);
+}

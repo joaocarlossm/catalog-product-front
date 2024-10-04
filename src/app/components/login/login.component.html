@@ -1,0 +1,27 @@
+<div class="login-page">
+    <div class="login-container">
+      <mat-card class="login-card">
+        <mat-card-header class="login-card-header">
+          <img src="https://media.gria.com.br/companies/698a218a-eaf2-4447-b32b-8ce6ca6867c8/avatar.png" alt="Logo da Empresa" class="logo">
+        </mat-card-header>
+        <mat-card-title class="login-title">Acessar Conta</mat-card-title>
+        <mat-card-content>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="input-item" appearance="outline">
+              <mat-label>Usuário</mat-label>
+              <input matInput type="text" formControlName="username" required>
+            </mat-form-field>
+            <mat-form-field class="input-item" appearance="outline">
+              <mat-label>Senha</mat-label>
+              <input matInput type="password" formControlName="password" required>
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="login-button" type="submit">Entrar</button>
+          </form>
+          <div class="footer-text">
+            Esqueceu sua senha? <a href="#">Recuperar</a>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

@@ -1,0 +1,118 @@
+.product-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: #1e3a5f;
+    padding: 40px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #1e3a5f;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.add-button {
+    background-color: #1e3a5f;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.add-button:hover {
+    background-color: #16314a;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+th.mat-header-cell {
+    background-color: #1e3a5f !important;
+    color: white !important;
+    padding: 20px !important;
+    font-size: 1.2em !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    text-align: left !important;
+}
+
+td.mat-cell {
+    padding: 20px !important;
+    font-size: 1.1em !important;
+    color: #333 !important;
+    border-bottom: 1px solid #ddd !important;
+}
+
+tr.mat-row td.mat-cell {
+    background-color: transparent !important;
+}
+
+tr.mat-row:hover td.mat-cell {
+    background-color: #e0f7fa !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.mat-icon-button mat-icon {
+    color: #1e3a5f !important;
+}
+
+.mat-icon-button[color="warn"] mat-icon {
+    color: red !important;
+}
+
+.mat-icon-button[color="primary"] mat-icon {
+    color: #1e3a5f !important;
+}

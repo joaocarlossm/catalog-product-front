@@ -1,0 +1,60 @@
+<div class="product-page">
+    <div class="product-card">
+      <img src="https://media.gria.com.br/companies/698a218a-eaf2-4447-b32b-8ce6ca6867c8/avatar.png" alt="Logo da Empresa" class="logo">
+      
+      <div class="product-card-header">
+        <h2>Lista de Produtos</h2>
+        <button mat-fab class="add-button" (click)="addProduct()">
+          <mat-icon class="icon-white">add</mat-icon>
+        </button>
+      </div>
+  
+      <!-- Tabela de produtos -->
+      <div class="table-wrapper">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 product-table">
+          
+          <!-- Coluna Nome -->
+          <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef> Nome </th>
+            <td mat-cell *matCellDef="let product"> {{product.nome}} </td>
+          </ng-container>
+      
+          <!-- Coluna Preço -->
+          <ng-container matColumnDef="preco">
+            <th mat-header-cell *matHeaderCellDef> Preço </th>
+            <td mat-cell *matCellDef="let product"> {{product.preco | currency:'BRL'}} </td>
+          </ng-container>
+      
+          <!-- Coluna Descrição -->
+          <ng-container matColumnDef="descricao">
+            <th mat-header-cell *matHeaderCellDef> Descrição </th>
+            <td mat-cell *matCellDef="let product"> {{product.descricao}} </td>
+          </ng-container>
+      
+          <!-- Coluna Ações -->
+          <ng-container matColumnDef="acoes">
+            <th mat-header-cell *matHeaderCellDef> Ações </th>
+            <td mat-cell *matCellDef="let product">
+              <button mat-icon-button color="primary" (click)="editProduct(product)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteProduct(product)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+      
+          <!-- Cabeçalho da tabela -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      
+          <!-- Linhas da tabela -->
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <!-- Componente de paginação -->
+        <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+      
+    </div>
+  </div>
+  
